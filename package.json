@@ -2,7 +2,7 @@
   "name": "method-separator",
   "main": "./lib/method-separator",
   "version": "0.1.0",
-  "description": "Show a separator line above each method.",
+  "description": "Show a separator line above each method or function.",
   "activationCommands": {},
   "repository": "https://github.com/braver/method-separator",
   "license": "MIT",
