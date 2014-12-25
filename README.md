@@ -1,4 +1,4 @@
-method-separator
-================
+# Method Separator
 
-Method separator for Atom
+Separates methods by adding a line above each `.meta.function`.  
+Usage: simply enable or disable this package.
