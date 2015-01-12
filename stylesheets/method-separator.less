@@ -1,17 +1,24 @@
 @import "syntax-variables";
 
+.separator-mixin() {
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    top: 0;
+    background: @syntax-wrap-guide-color; // wrap guide seems a good choice
+    opacity: .5; // set it off from the guide
+  }
+}
+
 atom-text-editor,
 atom-text-editor::shadow {
-  .meta.function {
-    &::before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 1px;
-      left: 0;
-      top: 0;
-      background: @syntax-wrap-guide-color; // wrap guide seems a good choice
-      opacity: .5; // set it off from the guide
-    }
+  .meta.function:not(.c) {
+    .separator-mixin()
+  }
+  .c.entity.name.function {
+    .separator-mixin()
   }
 }
